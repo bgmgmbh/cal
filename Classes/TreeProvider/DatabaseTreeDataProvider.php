@@ -200,7 +200,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 		$node->setSelectable(FALSE);
 		
 		if(strrpos($basicNode->getId (), self::CALENDAR_PREFIX, -strlen($basicNode->getId ())) !== FALSE) {
-			$id = intval(substr($basicNode->getId (),strlen(CALENDAR_PREFIX)));
+			$id = intval(substr($basicNode->getId (),strlen(self::CALENDAR_PREFIX)));
 			$row = BackendUtility::getRecordWSOL ('tx_cal_calendar', $id, '*', '', FALSE);
 			$iconFactory = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Imaging\\IconFactory');
 			$icon = $iconFactory->getIconForRecord('tx_cal_calendar', $row, \TYPO3\CMS\Core\Imaging\Icon::SIZE_SMALL);
