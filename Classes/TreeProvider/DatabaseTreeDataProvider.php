@@ -101,7 +101,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 	
 	protected function appendGlobalCategories($level, $parentChildNodes){
 		$node = GeneralUtility::makeInstance(\TYPO3\CMS\Backend\Tree\TreeNode::class);
-		$node->setId(GLOBAL_PREFIX);
+		$node->setId(self::GLOBAL_PREFIX);
 		
 		$childNodes = GeneralUtility::makeInstance(\TYPO3\CMS\Backend\Tree\TreeNodeCollection::class);
 		
@@ -130,7 +130,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 			if ($calres) {
 				while ($calrow = $GLOBALS ['TYPO3_DB']->sql_fetch_assoc ($calres)) {
 					$node = GeneralUtility::makeInstance(\TYPO3\CMS\Backend\Tree\TreeNode::class);
-					$node->setId(CALENDAR_PREFIX.$calrow['uid']);
+					$node->setId(self::CALENDAR_PREFIX.$calrow['uid']);
 					
 					if ($level < $this->levelMaximum) {
 						$where = 'l18n_parent = 0 and tx_cal_category.deleted = 0 and tx_cal_category.calendar_id = '.$calrow['uid'];
@@ -199,7 +199,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 		$node->setExpanded (TRUE);
 		$node->setSelectable(FALSE);
 		
-		if(strrpos($basicNode->getId (), CALENDAR_PREFIX, -strlen($basicNode->getId ())) !== FALSE) {
+		if(strrpos($basicNode->getId (), self::CALENDAR_PREFIX, -strlen($basicNode->getId ())) !== FALSE) {
 			$id = intval(substr($basicNode->getId (),strlen(CALENDAR_PREFIX)));
 			$row = BackendUtility::getRecordWSOL ('tx_cal_calendar', $id, '*', '', FALSE);
 			$iconFactory = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Imaging\\IconFactory');
@@ -207,7 +207,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 			$node->setIcon($icon);
 			$node->setLabel ($row['title']);
 			$node->setSortValue($id);
-		} else if($basicNode->getId () === GLOBAL_PREFIX) {
+		} else if($basicNode->getId () === self::GLOBAL_PREFIX) {
 			$node->setLabel ($GLOBALS['LANG']->sL ('LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_category.global'));
 			$node->setSortValue(0);
 		} else if ($basicNode->getId () == 0) {
@@ -283,7 +283,7 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
     
     		return in_array($child->getId(), $mounts);
 	    } else {
-	        if ($child->getId() === GLOBAL_PREFIX) {
+	        if ($child->getId() === self::GLOBAL_PREFIX) {
 	            return TRUE;
 	        }
 	        
@@ -326,8 +326,8 @@ class DatabaseTreeDataProvider extends \TYPO3\CMS\Core\Tree\TableConfiguration\D
 	            }
 	        }
 	        
-	        if(strrpos($child->getId(), CALENDAR_PREFIX, -strlen($child->getId())) !== FALSE) {
-	            $allow = in_array(substr($child->getId(), strlen(CALENDAR_PREFIX)), $be_userCalendars);
+	        if(strrpos($child->getId(), self::CALENDAR_PREFIX, -strlen($child->getId())) !== FALSE) {
+	            $allow = in_array(substr($child->getId(), strlen(self::CALENDAR_PREFIX)), $be_userCalendars);
 	        } else {
 	            $allow = in_array($child->getId(), $be_userCategories);
 	        }
