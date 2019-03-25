@@ -485,7 +485,8 @@ $tx_cal_event = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_event.byday_short',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byDay'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byDay',
+                            'default' => ''
 					)
 			),
 			'bymonthday' => array(
@@ -494,7 +495,8 @@ $tx_cal_event = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_event.bymonthday_short',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byMonthDay'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byMonthDay',
+                            'default' => ''
 					)
 			),
 			'bymonth' => array(
@@ -503,7 +505,8 @@ $tx_cal_event = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_event.bymonth_short',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byMonth'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->byMonth',
+                            'default' => ''
 					)
 			),
 			'until' => array(
@@ -574,7 +577,8 @@ $tx_cal_event = array(
 					'displayCond' => 'FIELD:rdate_type:IN:date_time,date,period',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->rdate'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->rdate',
+                            'default' => ''
 					)
 			),
 			'deviation' => array(
@@ -701,6 +705,7 @@ $tx_cal_event = array(
 							'max' => '256',
 							'eval' => 'required',
 							'renderType' => 'inputLink',
+                            'default' => '',
 							'wizards' => array(
 									'_PADDING' => 2,
 							)
@@ -726,6 +731,7 @@ $tx_cal_event = array(
 					'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.images',
 					'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig ( 'image', array(
 							'maxitems' => 5,
+                            'default' => '',
 							// Use the imageoverlayPalette instead of the basicoverlayPalette
 							'foreign_types' => array(
 									'0' => array(
@@ -746,6 +752,7 @@ $tx_cal_event = array(
 					'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media',
 					'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig ( 'attachment', array(
 							'maxitems' => 5,
+                            'default' => '',
 							// Use the imageoverlayPalette instead of the basicoverlayPalette
 							'foreign_types' => array(
 									'0' => array(

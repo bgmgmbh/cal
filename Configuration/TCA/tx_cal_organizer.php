@@ -56,6 +56,7 @@ $tx_cal_organizer = array(
 								'cols' => '30',
 								'rows' => '5',
 						        'enableRichtext' => true,
+                                'default' => '',
     						    'fieldControl' => array(
     						        'fullScreenRichtext' => array(
     						            'disabled' => '',
@@ -75,7 +76,8 @@ $tx_cal_organizer = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '30',
-								'max' => '128'
+								'max' => '128',
+                                'default' => '',
 						)
 				),
 				'zip' => array(
@@ -84,7 +86,8 @@ $tx_cal_organizer = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '15',
-								'max' => '15'
+								'max' => '15',
+                                'default' => '',
 						)
 				),
 				'city' => array(
@@ -93,7 +96,8 @@ $tx_cal_organizer = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '30',
-								'max' => '128'
+								'max' => '128',
+                                'default' => '',
 						)
 				),
 				'phone' => array(
@@ -102,7 +106,8 @@ $tx_cal_organizer = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '15',
-								'max' => '24'
+								'max' => '24',
+                                'default' => '',
 						)
 				),
 				'fax' => array(
@@ -111,7 +116,8 @@ $tx_cal_organizer = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '15',
-								'max' => '24'
+								'max' => '24',
+                                'default' => '',
 						)
 				),
 				'email' => array(
@@ -121,7 +127,8 @@ $tx_cal_organizer = array(
 								'type' => 'input',
 								'size' => '30',
 								'max' => '64',
-								'eval' => 'lower'
+								'eval' => 'lower',
+                                'default' => '',
 						)
 				),
 				'image' => array(
@@ -153,6 +160,7 @@ $tx_cal_organizer = array(
 								'max' => '128',
 								'checkbox' => '',
 								'eval' => 'trim',
+                                'default' => '',
 								'wizards' => array(
 										'_PADDING' => 2,
 										'link' => array(
@@ -265,6 +273,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('static_info_ta
 			'size' => 1,
 			'minitems' => 0,
 			'maxitems' => 1,
+            'default' => '',
         )
 	);
 	$tx_cal_organizer['columns']['country'] = array(

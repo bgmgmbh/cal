@@ -63,7 +63,8 @@ $tx_cal_event_deviation = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '30',
-								'max' => '128'
+								'max' => '128',
+                                'default' => ''
 						)
 				),
 				'starttime' => array(
@@ -245,7 +246,8 @@ $tx_cal_event_deviation = array(
 						'config' => array(
 								'type' => 'input',
 								'size' => '30',
-								'max' => '128'
+								'max' => '128',
+                                'default' => ''
 						)
 				),
 				'location_id' => array(
@@ -307,6 +309,7 @@ $tx_cal_event_deviation = array(
 								'checkbox' => '',
 								'eval' => 'trim',
 						        'renderType' => 'inputLink',
+                                'default' => '',
 								'wizards' => array(
 										'_PADDING' => 2,
 										'link' => array(
@@ -329,6 +332,7 @@ $tx_cal_event_deviation = array(
 								'cols' => '40',
 								'rows' => '6',
 						        'enableRichtext' => true,
+                                'default' => '',
     						    'fieldControl' => array(
     						        'fullScreenRichtext' => array(
     						            'disabled' => '',

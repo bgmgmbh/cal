@@ -49,7 +49,8 @@ $tx_cal_fe_user_event_monitor_mm = array(
 			'label' => 'tablenames',
 			'config' => array(
 				'type' => 'input',
-				'size' => '12'
+				'size' => '12',
+                'default' => ''
 			)
 		),
 		'offset' => array(

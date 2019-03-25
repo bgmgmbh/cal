@@ -63,7 +63,8 @@ $tx_cal_attendee = array(
 								'type' => 'input',
 								'size' => '30',
 								'max' => '64',
-								'eval' => 'lower'
+								'eval' => 'lower',
+                                'default' => ''
 						)
 				),
 				'attendance' => array(

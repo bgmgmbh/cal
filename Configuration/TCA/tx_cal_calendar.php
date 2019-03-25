@@ -130,14 +130,16 @@ $tx_cal_calendar = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_calendar.ext_url',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->extUrl'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->extUrl',
+                            'default' => ''
 					)
 			),
 			
 			'ext_url_notes' => array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_calendar.ext_url_notes',
 					'config' => array(
-							'type' => 'text'
+							'type' => 'text',
+                            'default' => ''
 					)
 			),
 			
@@ -158,7 +160,8 @@ $tx_cal_calendar = array(
 					        ),
 							'autoSizeMax' => '1',
 							'maxitems' => '1',
-							'minitems' => '0'
+							'minitems' => '0',
+                            'default' => ''
 					)
 			),
 			
@@ -180,7 +183,7 @@ $tx_cal_calendar = array(
 							'type' => 'input',
 							'size' => '5',
 							'readOnly' => 1,
-                        'default' => 0
+                            'default' => 0
 					)
 			),
 			
@@ -194,7 +197,8 @@ $tx_cal_calendar = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_category.headerstyle',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->getHeaderStyles'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->getHeaderStyles',
+                            'default' => ''
 					)
 			),
 			'bodystyle' => array(
@@ -202,7 +206,8 @@ $tx_cal_calendar = array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_category.bodystyle',
 					'config' => array(
 							'type' => 'user',
-							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->getBodyStyles'
+							'userFunc' => 'TYPO3\CMS\Cal\Backend\TCA\CustomTca->getBodyStyles',
+                            'default' => ''
 					)
 			),
 			'sys_language_uid' => array(

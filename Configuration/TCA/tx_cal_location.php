@@ -53,6 +53,7 @@ $tx_cal_location = array(
 				'type' => 'text',
 				'cols' => '30',
 				'rows' => '5',
+                'default' => '',
 			    'enableRichtext' => true,
 			    'fieldControl' => array(
 			        'fullScreenRichtext' => array(
@@ -73,7 +74,8 @@ $tx_cal_location = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
-				'max' => '128'
+				'max' => '128',
+                'default' => ''
 			)
 		),
 		'zip' => array(
@@ -82,7 +84,8 @@ $tx_cal_location = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '15',
-				'max' => '15'
+				'max' => '15',
+                'default' => ''
 			)
 		),
 		'city' => array(
@@ -91,7 +94,8 @@ $tx_cal_location = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
-				'max' => '128'
+				'max' => '128',
+                'default' => ''
 			)
 		),
 		'phone' => array(
@@ -100,7 +104,8 @@ $tx_cal_location = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '15',
-				'max' => '24'
+				'max' => '24',
+                'default' => ''
 			)
 		),
 		'fax' => array(
@@ -109,7 +114,8 @@ $tx_cal_location = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '15',
-				'max' => '24'
+				'max' => '24',
+                'default' => ''
 			)
 		),
 		'email' => array(
@@ -119,7 +125,8 @@ $tx_cal_location = array(
 				'type' => 'input',
 				'size' => '30',
 				'max' => '64',
-				'eval' => 'lower'
+				'eval' => 'lower',
+                'default' => ''
 			)
 		),
 		'image' => array(
@@ -152,6 +159,7 @@ $tx_cal_location = array(
 				'checkbox' => '',
 				'eval' => 'trim',
 			    'renderType' => 'inputLink',
+                'default' => '',
 				'wizards' => array(
 					'_PADDING' => 2,
 				)
