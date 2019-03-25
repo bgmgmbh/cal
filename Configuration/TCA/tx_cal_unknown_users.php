@@ -27,7 +27,7 @@ $tx_cal_unknown_users = array(
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
-				'default' => '0'
+				'default' => 0
 			)
 		),
 		'email' => array(

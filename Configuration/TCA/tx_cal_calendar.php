@@ -44,7 +44,7 @@ $tx_cal_calendar = array(
 					'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 					'config' => array(
 							'type' => 'check',
-							'default' => '0'
+							'default' => 0
 					)
 			),
 			'title' => array(
@@ -69,13 +69,15 @@ $tx_cal_calendar = array(
 							'autoSizeMax' => 25,
 							'maxitems' => 500,
 							'allowed' => 'fe_users,fe_groups',
+                        'default' => 0
 					)
 			),
 			'activate_fnb' => array(
 					'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_calendar.activate_fnb',
 			        'onChange' => 'reload',
 					'config' => array(
-							'type' => 'check'
+							'type' => 'check',
+                        'default' => 0
 					)
 			),
 			'fnb_user_cnt' => array(
@@ -90,6 +92,7 @@ $tx_cal_calendar = array(
 							'minitems' => 0,
 							'maxitems' => 100,
 							'allowed' => 'fe_users,fe_groups',
+                        'default' => 0
 					)
 			),
 			'nearby' => array(
@@ -176,7 +179,8 @@ $tx_cal_calendar = array(
 					'config' => array(
 							'type' => 'input',
 							'size' => '5',
-							'readOnly' => 1
+							'readOnly' => 1,
+                        'default' => 0
 					)
 			),
 			
@@ -218,7 +222,8 @@ $tx_cal_calendar = array(
 											'LLL:EXT:lang/locallang_general.xlf:LGL.default_value',
 											0
 									)
-							)
+							),
+                        'default' => 0
 					)
 			),
 			'l18n_parent' => array(

@@ -35,7 +35,7 @@ $tx_cal_organizer = array(
 						'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 						'config' => array(
 								'type' => 'check',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'name' => array(
@@ -178,6 +178,7 @@ $tx_cal_organizer = array(
 								'minitems' => 0,
 								'maxitems' => 100,
 								'MM' => 'tx_cal_organizer_shared_user_mm',
+                                'default' => 0
 						)
 				),
 				'sys_language_uid' => array(
@@ -186,6 +187,7 @@ $tx_cal_organizer = array(
 						'config' => array(
                                 'renderType' => 'selectSingle',
 								'type' => 'select',
+                                'default' => 0,
 								'foreign_table' => 'sys_language',
 								'foreign_table_where' => 'ORDER BY sys_language.title',
 								'items' => array(
@@ -283,6 +285,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('static_info_ta
 			'size' => 1,
 			'minitems' => 0,
 			'maxitems' => 1,
+            'default' => 0
 	    )
 	);
 	if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger (TYPO3_version) >= 7006000) {

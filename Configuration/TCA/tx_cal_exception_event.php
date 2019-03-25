@@ -31,7 +31,7 @@ $tx_cal_exception_event = array(
 						'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 						'config' => array(
 								'type' => 'check',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'title' => array(
@@ -52,7 +52,7 @@ $tx_cal_exception_event = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'datetime',
-								'default' => '0',
+								'default' => 0,
 								'checkbox' => '0'
 						)
 				),
@@ -64,7 +64,7 @@ $tx_cal_exception_event = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'datetime',
-								'default' => '0',
+								'default' => 0,
 								'checkbox' => '0'
 						)
 				),
@@ -208,7 +208,8 @@ $tx_cal_exception_event = array(
 								'type' => 'input',
 								'size' => '4',
 								'eval' => 'num',
-								'checkbox' => '0'
+								'checkbox' => '0',
+                                'default' => 0
 						)
 				),
 				

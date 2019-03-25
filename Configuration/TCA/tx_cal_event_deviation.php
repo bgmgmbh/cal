@@ -49,7 +49,7 @@ $tx_cal_event_deviation = array(
 						'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 						'config' => array(
 								'type' => 'check',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'parentid' => array(
@@ -74,7 +74,7 @@ $tx_cal_event_deviation = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'datetime',
-								'default' => '0',
+								'default' => 0,
 								'checkbox' => '0'
 						)
 				),
@@ -86,7 +86,7 @@ $tx_cal_event_deviation = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'datetime',
-								'default' => '0',
+								'default' => 0,
 								'checkbox' => '0'
 						)
 				),
@@ -97,7 +97,8 @@ $tx_cal_event_deviation = array(
 								'type' => 'input',
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
-								'eval' => 'required,date'
+								'eval' => 'required,date',
+                                'default' => 0
 						)
 				),
 				'orig_start_time' => array(
@@ -117,7 +118,8 @@ $tx_cal_event_deviation = array(
 								'type' => 'input',
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
-								'eval' => 'date'
+								'eval' => 'date',
+                                'default' => 0
 						)
 				),
 				'allday' => array(
@@ -137,7 +139,7 @@ $tx_cal_event_deviation = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'time',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'end_date' => array(
@@ -148,7 +150,8 @@ $tx_cal_event_deviation = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'date',
-						        'tx_cal_event' => 'start_date'
+						        'tx_cal_event' => 'start_date',
+                                'default' => 0
 						)
 				),
 				'end_time' => array(
@@ -160,7 +163,7 @@ $tx_cal_event_deviation = array(
 						        'renderType' => 'inputDateTime',
 								'size' => '12',
 								'eval' => 'time',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'organizer' => array(
@@ -182,6 +185,7 @@ $tx_cal_event_deviation = array(
 								'minitems' => 0,
 								'maxitems' => 1,
 								'allowed' => $useOrganizerStructure,
+                                'default' => 0,
     						    'fieldControl' => array(
     						        'addRecord' => array(
     						            'disabled' => '',
@@ -217,6 +221,7 @@ $tx_cal_event_deviation = array(
 								'size' => '1',
 								'maxitems' => '1',
 								'minitems' => '0',
+                                'default' => 0
 						)
 				),
 				'organizer_link' => array(
@@ -253,6 +258,7 @@ $tx_cal_event_deviation = array(
 								'minitems' => 0,
 								'maxitems' => 1,
 								'allowed' => $useLocationStructure,
+                                'default' => 0,
     						    'fieldControl' => array(
     						        'addRecord' => array(
     						            'disabled' => '',
@@ -288,6 +294,7 @@ $tx_cal_event_deviation = array(
 								'size' => '1',
 								'maxitems' => '1',
 								'minitems' => '0',
+                                'default' => 0
 						)
 				),
 				'location_link' => array(
@@ -361,6 +368,7 @@ $tx_cal_event_deviation = array(
 						'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.images',
 						'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig ( 'image', array(
 								'maxitems' => 5,
+                                'default' => 0,
 								// Use the imageoverlayPalette instead of the basicoverlayPalette
 								'foreign_types' => array(
 										'0' => array(

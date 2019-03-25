@@ -27,7 +27,7 @@ $tx_cal_attendee = array(
 						'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 						'config' => array(
 								'type' => 'check',
-								'default' => '0'
+								'default' => 0
 						)
 				),
 				'fe_user_id' => array(
@@ -40,6 +40,7 @@ $tx_cal_attendee = array(
 								'minitems' => 0,
 								'maxitems' => 1,
 								'allowed' => 'fe_users',
+								'default' => 0
 						)
 				),
 				'fe_group_id' => array(
@@ -52,6 +53,7 @@ $tx_cal_attendee = array(
 								'minitems' => 0,
 								'maxitems' => 1,
 								'allowed' => 'fe_groups',
+								'default' => 0
 						)
 				),
 				'email' => array(
@@ -68,7 +70,7 @@ $tx_cal_attendee = array(
 						'exclude' => 1,
 						'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_attendee.attendance',
 						'config' => array(
-                                'renderType' => 'selectSingle',
+								'renderType' => 'selectSingle',
 								'type' => 'select',
 								'items' => array(
 										array(
@@ -97,7 +99,7 @@ $tx_cal_attendee = array(
 						'exclude' => 1,
 						'label' => 'LLL:EXT:cal/Resources/Private/Language/locallang_db.xml:tx_cal_attendee.status',
 						'config' => array(
-                                'renderType' => 'selectSingle',
+								'renderType' => 'selectSingle',
 								'type' => 'select',
 								'items' => array(
 										array(
@@ -127,7 +129,8 @@ $tx_cal_attendee = array(
 								),
 								'size' => '1',
 								'minitems' => 1,
-								'maxitems' => 1
+								'maxitems' => 1,
+								'default' => 0
 						)
 				)
 		),

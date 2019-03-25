@@ -28,6 +28,7 @@ $tx_cal_fe_user_event_monitor_mm = array(
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
+                'default' => 0
 			)
 		),
 		'uid_local' => array(
@@ -40,6 +41,7 @@ $tx_cal_fe_user_event_monitor_mm = array(
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
+                'default' => 0
 			)
 		),
 		'tablenames' => array(
@@ -67,7 +69,8 @@ $tx_cal_fe_user_event_monitor_mm = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => '5',
-				'readOnly' => 1
+				'readOnly' => 1,
+                'default' => 0
 			)
 		)
 	),
