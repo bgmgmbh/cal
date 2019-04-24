@@ -119,7 +119,8 @@ $tx_cal_category = array(
 						'itemListStyle' => 'height:300px;',
 						'minitems' => 0,
 						'maxitems' => 2,
-						'foreign_table' => 'tx_cal_category'
+						'foreign_table' => 'tx_cal_category',
+						'default' => '0',
 				)
 		),
 		'shared_user_allowed' => array(
@@ -138,6 +139,7 @@ $tx_cal_category = array(
 						'size' => '1',
 						'maxitems' => '1',
 						'minitems' => '0',
+						'default' => '0',
 				)
 		),
 		'notification_emails' => array(
