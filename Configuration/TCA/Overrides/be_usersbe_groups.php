@@ -24,7 +24,8 @@ $tempColumns = array(
 			'maxitems' => 100,
 			'autoSizeMax' => 20,
 			'itemListStyle' => 'height:130px;',
-			'foreign_table' => 'tx_cal_calendar'
+			'foreign_table' => 'tx_cal_calendar',
+			'default' => 0
 		)
 	),
 	'tx_cal_category' => array(
@@ -42,7 +43,8 @@ $tempColumns = array(
 			'maxitems' => 100,
 			'autoSizeMax' => 20,
 			'itemListStyle' => 'height:270px;',
-			'foreign_table' => 'tx_cal_category'
+			'foreign_table' => 'tx_cal_category',
+			'default' => 0
 		)
 	)
 );
