@@ -634,6 +634,7 @@ $tx_cal_event = array(
 							'size' => 1,
 							'minitems' => 0,
 							'maxitems' => 1,
+							'default' => '0'
 					)
 			),
 			'fe_crgroup_id' => array(
@@ -646,6 +647,7 @@ $tx_cal_event = array(
 							'size' => 1,
 							'minitems' => 0,
 							'maxitems' => 1,
+							'default' => '0'
 					)
 			),
 			
@@ -723,6 +725,7 @@ $tx_cal_event = array(
 							'maxitems' => '1',
 							'minitems' => '0',
 							'eval' => 'required',
+							'default' => '0',
 					)
 			),
 			/* new */
@@ -944,7 +947,8 @@ $tx_cal_event = array(
 									)
 							),
 							'foreign_table' => 'tx_cal_event',
-							'foreign_table_where' => 'AND tx_cal_event.sys_language_uid IN (-1,0)'
+							'foreign_table_where' => 'AND tx_cal_event.sys_language_uid IN (-1,0)',
+							'default' => '0',
 					)
 			),
 			'l18n_diffsource' => array(
